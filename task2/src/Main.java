@@ -16,41 +16,10 @@ public class Main {
         double greatest = 0;
         double average = 0;
         double smallest = 0;
-        //todo дописать логику программы ниже.
-        if(first>second && first>third){
-            greatest=first;
-            if(second>third){
-                average=second;
-                smallest=third;
-            }
-            if(second<third){
-                average=third;
-                smallest=second;
-            }
-        }
-        if(second>first && second>third){
-            greatest=second;
-            if(first>third){
-                average=first;
-                smallest=third;
-            }
-            else{
-                average=third;
-                smallest=first;
-            }
-        }
-        if(third>first && third>second){
-            greatest=third;
-            if(first>second){
-                average=first;
-                smallest=second;
-            }
-            else{
-                average=second;
-                smallest=first;
-            }
-        }
 
+        greatest=(first>second && first>third)?first:second>first && second>third ?second:third;
+        average=first>second &&first<third?first:second>first && second<third?second:third;
+        smallest=first<second && first<third?first:second<first && second<third?second:third;
 
 
 
