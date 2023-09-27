@@ -18,7 +18,8 @@ public class Main {
         double smallest = 0;
 
         greatest=(first>second && first>third)?first:second>first && second>third ?second:third;
-        average=first>second &&first<third?first:second>first && second<third?second:third;
+        average=(first>second &&first<third)||(first<second && first>third)? first :
+                (second>first && second<third)||(second<first && second>third)?second:third;
         smallest=first<second && first<third?first:second<first && second<third?second:third;
 
 
